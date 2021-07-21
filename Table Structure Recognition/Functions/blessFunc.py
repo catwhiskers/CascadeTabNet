@@ -322,8 +322,8 @@ def borderless(table, image, res_cells):
         cv2.rectangle(im2, (tbox[0], tbox[1]), (tbox[2], tbox[3]), colors[no%len(colors)], 1)
         # print(tbox)
 
-    cv2.imshow("text chunks", im2)
-    cv2.waitKey(0)
+    #cv2.imshow("text chunks", im2)
+    #cv2.waitKey(0)
 
     def rowstart(val):
       r = 0

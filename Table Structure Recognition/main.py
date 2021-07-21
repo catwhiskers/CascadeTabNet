@@ -6,19 +6,20 @@ import lxml.etree as etree
 import glob
 
 ############ To Do ############
-image_path = 'path to directory of images'
-xmlPath = 'path to save xml'
+image_path = './Examples/*.jpg'
+xmlPath = 'output.xml'
 
-config_fname = "path to config file of model" 
-checkpoint_path = "path to checkpoint directory"
-epoch = 'epoch_file.name'
+config_file = '../Config/cascade_mask_rcnn_hrnetv2p_w32_20e.py'
+checkpoint_file = '../'
+epoch = 'epoch_36.pth'
 ##############################
 
 
-model = init_detector(config_fname, checkpoint_path+epoch)
+model = init_detector(config_file, checkpoint_file+epoch)
 
 # List of images in the image_path
 imgs = glob.glob(image_path)
+print(imgs)
 for i in imgs:
     result = inference_detector(model, i)
     res_border = []
