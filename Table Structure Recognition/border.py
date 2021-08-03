@@ -56,7 +56,7 @@ def border(table,image):
             cell.append(coords)
             tableXML.append(cell)
     ## to visualize the detected text areas
-    # cv2.imshow("detected cells",imag)
+    cv2.imwrite("table_rec.jpg",imag)
     # cv2.waitKey(0)
     return tableXML
 

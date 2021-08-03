@@ -1,0 +1,2 @@
+#!/bin/bash
+python /mmdetection/tools/train.py  /CascadeTabNet/Config/cascade_mask_rcnn_hrnetv2p_w32_20e_sm_tr.py
